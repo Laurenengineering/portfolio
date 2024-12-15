@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lauren Thompson - Portfolio</title>
     <style>
+        /* Previous styles remain the same */
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
@@ -18,76 +19,87 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: var(--background-color);
-            color: var(--primary-color);
+            background-color: var (--background-color);
+            color: var (--primary-color);
         }
         .container {
-            width: 90%;
-            max-width: 1100px;
+            width: 90 %;
+            max-width: 1100 px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20 px;
         }
         header {
-            background-color: var(--primary-color);
+            background-color: var (--primary-color);
             color: white;
             text-align: center;
-            padding: 2rem 0;
+            padding: 2 rem 0;
         }
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.5 rem;
+            margin-bottom: 10 px;
         }
         .project {
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            padding: 25px;
-            transition: transform 0.3s ease;
+            border-radius: 8 px;
+            box-shadow: 0 4 px 6 px rgba (0,0,0,0.1);
+            margin-bottom: 20 px;
+            padding: 25 px;
+            transition: transform 0.3 s ease;
         }
         .project:hover {
-            transform: scale(1.02);
+            transform: scale (1.02);
         }
         .project h3 {
-            color: var(--secondary-color);
-            margin-bottom: 10px;
+            color: var (--secondary-color);
+            margin-bottom: 10 px;
         }
         .technologies {
             background-color: #e8f4f8;
             display: inline-block;
-            padding: 5px 10px;
-            border-radius: 4px;
-            margin: 10px 0;
-            font-size: 0.9rem;
+            padding: 5 px 10 px;
+            border-radius: 4 px;
+            margin: 10 px 0;
+            font-size: 0.9 rem;
         }
         .project-links {
             display: flex;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 15 px;
+            margin-top: 15 px;
         }
         .project-links a {
             text-decoration: none;
-            color: var(--secondary-color);
+            color: var (--secondary-color);
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: color 0.3 s ease;
         }
         .project-links a:hover {
-            color: var(--primary-color);
+            color: var (--primary-color);
         }
         footer {
-            background-color: var(--primary-color);
+            background-color: var (--primary-color);
             color: white;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 20px;
+            padding: 1 rem 0;
+            margin-top: 20 px;
         }
-        @media (max-width: 768px) {
+        /* New styles */
+        .section-title {
+            margin: 40 px 0 20 px 0;
+            padding-bottom: 10 px;
+            border-bottom: 2 px solid var (--secondary-color);
+        }
+        .project-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        @ media (max-width: 768 px) {
             .container {
-                width: 95%;
-                padding: 10px;
+                width: 95 %;
+                padding: 10 px;
             }
             header h1 {
-                font-size: 2rem;
+                font-size: 2 rem;
             }
         }
     </style>
@@ -101,32 +113,68 @@
     </header>
 
     <div class="container">
-        <section id="projects">
-            <h2>Personal Projects</h2>
+        <section id="personal-projects">
+            <h2 class="section-title">Personal Projects</h2>
             
-            <div class="project">
-                <h3>Autonomous Drone Delivery System</h3>
-                <p>Designed and prototyped a drone delivery system for emergency medical supplies in remote areas, focusing on route optimization and payload efficiency.</p>
-                <div class="technologies">
-                    Technologies: Python, Drone Design, Machine Learning, CAD
+            <a href="drone-project.html" class="project-link" target="_blank">
+                <div class="project">
+                    <h3>Autonomous Drone Delivery System</h3>
+                    <p>Designed and prototyped a drone delivery system for emergency medical supplies in remote areas, focusing on route optimization and payload efficiency.</p>
+                    <div class="technologies">
+                        Technologies: Python, Drone Design, Machine Learning, CAD
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yourusername/drone-project" target="_blank">GitHub Repository</a>
+                        <a href="drone-report.pdf" target="_blank">Project Report</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="#">GitHub Repository</a>
-                    <a href="#">Project Report</a>
-                </div>
-            </div>
+            </a>
 
-            <div class="project">
-                <h3>Sustainable Energy Micro-Grid</h3>
-                <p>Developed a comprehensive micro-grid design integrating solar, wind, and battery storage with smart energy management algorithms.</p>
-                <div class="technologies">
-                    Technologies: MATLAB, Solar Design, Energy Modeling
+            <a href="microgrid-project.html" class="project-link" target="_blank">
+                <div class="project">
+                    <h3>Sustainable Energy Micro-Grid</h3>
+                    <p>Developed a comprehensive micro-grid design integrating solar, wind, and battery storage with smart energy management algorithms.</p>
+                    <div class="technologies">
+                        Technologies: MATLAB, Solar Design, Energy Modeling
+                    </div>
+                    <div class="project-links">
+                        <a href="microgrid-paper.pdf" target="_blank">Research Paper</a>
+                        <a href="microgrid-presentation.pdf" target="_blank">Project Presentation</a>
+                    </div>
                 </div>
-                <div class="project-links">
-                    <a href="#">Research Paper</a>
-                    <a href="#">Project Presentation</a>
+            </a>
+        </section>
+
+        <section id="academic-projects">
+            <h2 class="section-title">Academic Projects</h2>
+            
+            <a href="thermodynamics-project.html" class="project-link" target="_blank">
+                <div class="project">
+                    <h3>Heat Exchanger Design</h3>
+                    <p>Designed and optimized a shell-and-tube heat exchanger for a chemical processing plant, achieving 95% thermal efficiency.</p>
+                    <div class="technologies">
+                        Technologies: ANSYS, Thermal Analysis, CAD
+                    </div>
+                    <div class="project-links">
+                        <a href="heat-exchanger-report.pdf" target="_blank">Project Report</a>
+                        <a href="heat-exchanger-simulation.pdf" target="_blank">Simulation Results</a>
+                    </div>
                 </div>
-            </div>
+            </a>
+
+            <a href="robotics-project.html" class="project-link" target="_blank">
+                <div class="project">
+                    <h3>Robotic Arm Control System</h3>
+                    <p>Implemented PID control system for a 6-DOF robotic arm, achieving precise object manipulation for assembly line automation.</p>
+                    <div class="technologies">
+                        Technologies: Arduino, Control Systems, C++
+                    </div>
+                    <div class="project-links">
+                        <a href="robotics-documentation.pdf" target="_blank">Technical Documentation</a>
+                        <a href="https://github.com/yourusername/robotics-control" target="_blank">Code Repository</a>
+                    </div>
+                </div>
+            </a>
         </section>
     </div>
             
