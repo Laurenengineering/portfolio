@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Drone Delivery System - Lauren Thompson</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .project-overview {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .technologies {
+            background-color: #e8f4f8;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-container {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            text-align: center;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        .project-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Autonomous Drone Delivery System</h1>
+
+        <div class="project-overview">
+            <h2>Project Overview</h2>
+            <p>Designed and prototyped a drone delivery system for emergency medical supplies in remote areas, focusing on route optimization and payload efficiency. This project aimed to solve the last-mile delivery problem in emergency medical situations.</p>
+            <div class="technologies">
+                Technologies: Python, Drone Design, Machine Learning, CAD
+            </div>
+        </div>
+
+        <div class="image-gallery">
+            <div class="image-container">
+                <img src="/api/placeholder/600/400" alt="Drone Prototype" class="project-image">
+                <p class="image-caption">Initial prototype of the delivery drone with custom payload mechanism</p>
+            </div>
+            <div class="image-container">
+                <img src="/api/placeholder/600/400" alt="CAD Design" class="project-image">
+                <p class="image-caption">CAD model showing the internal component layout</p>
+            </div>
+            <div class="image-container">
+                <img src="/api/placeholder/600/400" alt="Testing Setup" class="project-image">
+                <p class="image-caption">Field testing setup with various payload configurations</p>
+            </div>
+        </div>
+
+        <div class="project-details">
+            <h2>Technical Details</h2>
+            <h3>Key Features</h3>
+            <ul>
+                <li>Custom-designed payload retention system capable of carrying up to 5kg</li>
+                <li>Autonomous navigation system using GPS and computer vision</li>
+                <li>Weather-resistant design for operation in various conditions</li>
+                <li>Real-time telemetry and monitoring system</li>
+            </ul>
+
+            <h3>Development Process</h3>
+            <p>The development process involved multiple iterations of design, testing, and refinement. Initial prototypes were created using 3D printing for rapid iteration, followed by final components machined from aluminum for durability.</p>
+
+            <h3>Results</h3>
+            <p>The final prototype demonstrated successful autonomous delivery capabilities with:</p>
+            <ul>
+                <li>95% delivery success rate in test scenarios</li>
+                <li>Average delivery time reduced by 70% compared to ground transport</li>
+                <li>Operational range of 15km with full payload</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
