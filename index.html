@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lauren Thompson - Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .project {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 25px;
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: scale(1.02);
+        }
+        .project h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+        .technologies {
+            background-color: #e8f4f8;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            font-size: 0.9rem;
+        }
+        .project-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .project-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .project-links a:hover {
+            color: var(--primary-color);
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Lauren Thompson</h1>
+            <p>Mechanical Engineering Student</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="projects">
+            <h2>Personal Projects</h2>
+            
+            <div class="project">
+                <h3>Autonomous Drone Delivery System</h3>
+                <p>Designed and prototyped a drone delivery system for emergency medical supplies in remote areas, focusing on route optimization and payload efficiency.</p>
+                <div class="technologies">
+                    Technologies: Python, Drone Design, Machine Learning, CAD
+                </div>
+                <div class="project-links">
+                    <a href="#">GitHub Repository</a>
+                    <a href="#">Project Report</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Sustainable Energy Micro-Grid</h3>
+                <p>Developed a comprehensive micro-grid design integrating solar, wind, and battery storage with smart energy management algorithms.</p>
+                <div class="technologies">
+                    Technologies: MATLAB, Solar Design, Energy Modeling
+                </div>
+                <div class="project-links">
+                    <a href="#">Research Paper</a>
+                    <a href="#">Project Presentation</a>
+                </div>
+            </div>
+        </section>
+    </div>
+            
+    <footer>
+        <div class="container">
+            <p>Contact: lauren.thompson@university.edu | Phone: (XXX) XXX-XXXX</p>
+            <p>© 2024 Lauren Thompson. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
