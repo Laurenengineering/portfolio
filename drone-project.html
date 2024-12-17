@@ -71,6 +71,7 @@
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             text-align: center;
+            position: relative;
         }
 
         .image-container {
@@ -91,6 +92,27 @@
             margin-top: 10px;
             color: var(--primary-color);
             font-style: italic;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-button.prev {
+            left: 10px;
+        }
+
+        .nav-button.next {
+            right: 10px;
         }
 
         .project-details {
@@ -143,6 +165,8 @@
                 <img src="jewleryboxforweb.jpg" alt="CAD Design" class="project-image">
                 <p class="image-caption">CAD model showing the internal component layout</p>
             </div>
+            <button class="nav-button prev" onclick="showPrevImage()">&#8249;</button>
+            <button class="nav-button next" onclick="showNextImage()">&#8250;</button>
         </div>
 
         <div class="project-details">
@@ -175,6 +199,12 @@
         function showNextImage() {
             imageContainers[currentIndex].classList.remove('active');
             currentIndex = (currentIndex + 1) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+
+        function showPrevImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
             imageContainers[currentIndex].classList.add('active');
         }
 
