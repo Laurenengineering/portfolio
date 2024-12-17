@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluminum Light Saber Hilt</title>
+    <title>Autonomous Drone Delivery System</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -65,28 +65,30 @@
         }
 
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
         }
 
         .image-container {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .image-container.active {
+            display: block;
         }
 
         .project-image {
-            width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 4px;
         }
 
         .image-caption {
             margin-top: 10px;
-            text-align: center;
             color: var(--primary-color);
             font-style: italic;
         }
@@ -101,7 +103,7 @@
 
         @media (max-width: 768px) {
             .image-gallery {
-                grid-template-columns: 1fr;
+                padding: 15px;
             }
         }
     </style>
@@ -125,17 +127,21 @@
         </div>
 
         <div class="image-gallery">
-            <div class="image-container">
-                <img src="lightsaberinlatheweb.jpg" alt="Drone Prototype" class="project-image">
-                <p class="image-caption">Initial prototype of the delivery drone with custom payload mechanism</p>
-            </div>
-            <div class="image-container">
-                <img src="lightsaberblueweb.jpg" alt="CAD Design" class="project-image">
+            <div class="image-container active">
+                <img src="saberCAD.png" alt="CAD Design" class="project-image">
                 <p class="image-caption">CAD model showing the internal component layout</p>
             </div>
             <div class="image-container">
                 <img src="lightsaberinmillweb.jpg" alt="Testing Setup" class="project-image">
                 <p class="image-caption">Field testing setup with various payload configurations</p>
+            </div>
+            <div class="image-container">
+                <img src="lightsaberbluewebweb.jpg" alt="Drone Prototype" class="project-image">
+                <p class="image-caption">Initial prototype of the delivery drone with custom payload mechanism</p>
+            </div>
+            <div class="image-container">
+                <img src="jewleryboxforweb.jpg" alt="CAD Design" class="project-image">
+                <p class="image-caption">CAD model showing the internal component layout</p>
             </div>
         </div>
 
@@ -161,5 +167,18 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        const imageContainers = document.querySelectorAll('.image-container');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextImage, 5000);
+    </script>
 </body>
 </html>
