@@ -101,10 +101,11 @@
             background-color: rgba(255, 255, 255, 0.7);
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            font-size: 24px;
+            width: 60px;
+            height: 60px;
+            font-size: 32px;
             cursor: pointer;
+            display: block;
         }
 
         .nav-button.prev {
@@ -113,6 +114,15 @@
 
         .nav-button.next {
             right: 10px;
+        }
+
+        .nav-button-caption {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: var(--primary-color);
         }
 
         .project-details {
@@ -166,7 +176,9 @@
                 <p class="image-caption">Finished hilt without blade and electronics.</p>
             </div>
             <button class="nav-button prev" onclick="showPrevImage()">&#8249;</button>
+            <div class="nav-button-caption prev-caption">Previous</div>
             <button class="nav-button next" onclick="showNextImage()">&#8250;</button>
+            <div class="nav-button-caption next-caption">Next</div>
         </div>
 
         <div class="project-details">
@@ -205,8 +217,6 @@
             currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
             imageContainers[currentIndex].classList.add('active');
         }
-
-        setInterval(showNextImage, 5000);
     </script>
 </body>
 </html>
