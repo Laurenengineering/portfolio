@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Drone Delivery System</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .project-overview {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .technologies {
+            background-color: #e8f4f8;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .image-gallery {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .image-container {
+            display: none;
+        }
+
+        .image-container.active {
+            display: block;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 32px;
+            cursor: pointer;
+            display: block;
+        }
+
+
+
+        .project-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Experimental Investigation of Electric Fields for Dust Removal on Solar Panels for Mars Rovers</h1>
+
+        <div class="project-overview">
+            <h2>Project Overview</h2>
+            <p>As a team member on a vertically integrated project (VIP) team at Georgia Tech, I worked alongside a team of interdisplinary students to conduct experiments on improving dust mitigation techniques for Mars rovers. Since dust storms pose a threat to a rover’s ability to generate power and can be hazardous to any critical rover component, our team investigated new solutions to mitigate dust accumulation. After conducting research on prexisting dust mitigation methods and their rates of success, the team designed a successful experiment that generated an electric field removing martian regolith dust particles of various sizes from ITO coated glass panels. The regolith particles were created in the lab and closely resemble the composition of real martian regolith. These particles were then filtered based on size and uniformly applied to the glass panels. Running the generated field over these panels resulted in successful dust removal.</p>
+            <div class="technologies">
+                Technologies: designing and implementing a successful experiment, research methods, electronics and electric field generation, technical writing, data analysis 
+            </div>
+        </div>
+
+        <div class="image-gallery">
+            <div class="image-container active">
+                <img src="images/filterexample.gif" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Caption Here</p>
+            </div>
+            <div class="image-container active">
+                <img src="images/sensorcatchCAD.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">For example, this catch mechanism integrated a sensor to obtain data on the angles the crane reached prior to tip over.</p>
+            </div>
+            <div class="image-container active">
+                <img src="images/7ftCADcrane.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Completed CAD model of the 7-ft scale apparatus featuring the chosen catch mechanism on the base plate. Additionally, this model will contain a camera angle sensor attached to the end of the jib that tracks the position of the load at all times. </p>
+            </div>
+           <div class="image-container active">
+                <img src="images/cranebaseweb.jpg" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Currently, the team is working on machining the scale apparatus.</p>
+            </div>
+          <div class="image-container active">
+                <img src="images/experimental setup mars/gif" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption"> Final experimental setup: we attached the copper fiberglass electrode to ground and connected our glass plate to a positive voltage. Water pump pliers were used to hold the electrode to assist in moving it over the glass. After turning on the DC power supply, we executed 2 back-and-forth sweeps over the glass panel. Once those had been completed, the DC regulator was turned off, and an “after” picture was taken on another blank white paper..</p>
+            </div>
+        </div>
+
+        <div class="project-details">
+            <h2>Additional Details</h2>
+            <h3>Non-pictured Steps</h3>
+            <ul>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+
+            <h3>Learning Process </h3>
+            <ul>
+                <li>...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const imageContainers = document.querySelectorAll('.image-container');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+
+        function showPrevImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
