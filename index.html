@@ -40,26 +40,45 @@
         .header-content {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+        }
+
+        .left-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .profile-section {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 20px;
         }
 
+        .profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
         .profile-photo {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background-color: white;
         }
 
+        .student-info {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-top: 5px;
+        }
+
         .header-photo {
-            width: 300px;
+            width: 400px;
             height: auto;
             border-radius: 8px;
+            margin-left: 20px;
         }
 
         .navigation {
@@ -87,72 +106,6 @@
             background-color: white;
         }
 
-        .project {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-            padding: 25px;
-            display: flex;
-            align-items: center;
-            transition: transform 0.3s ease;
-        }
-
-        .project:hover {
-            transform: scale(1.02);
-        }
-
-        .project-image {
-            width: 200px;
-            height: 150px;
-            background-color: var(--background-color);
-            border-radius: 4px;
-            margin-right: 20px;
-        }
-
-        .project h3 {
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-
-        .technologies {
-            background-color: #e8f4f8;
-            display: inline-block;
-            padding: 5px 10px;
-            border-radius: 4px;
-            margin: 10px 0;
-            font-size: 0.9rem;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .project-links a {
-            text-decoration: none;
-            color: var(--secondary-color);
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .section-title {
-            margin: 40px 0 20px 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--secondary-color);
-        }
-
-        .project-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -166,10 +119,24 @@
             .header-photo {
                 width: 100%;
                 margin-top: 20px;
+                margin-left: 0;
+            }
+
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
             }
 
             .navigation {
                 flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-info {
+                align-items: center;
+            }
+
+            .left-section {
                 align-items: center;
             }
         }
@@ -179,18 +146,25 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="profile-section">
-                    <img src="images/headshot.jpg" alt="Profile Photo" class="profile-photo">
-                    <h1>Lauren Thompson</h1>
+                <div class="left-section">
+                    <div class="profile-section">
+                        <img src="images/headshot.jpg" alt="Profile Photo" class="profile-photo">
+                        <div class="profile-info">
+                            <h1>Lauren Thompson</h1>
+                            <div class="student-info">
+                                Georgia Tech Honors Mechanical Engineering Student
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navigation">
+                        <a href="#research-projects">Research Projects</a>
+                        <a href="#class-projects">Class Projects</a>
+                        <a href="#personal-projects">Personal Projects</a>
+                        <a href="#about">About</a>
+                    </nav>
                 </div>
                 <img src="images/techtower.jpg" alt="Header Photo" class="header-photo">
             </div>
-            <nav class="navigation">
-                <a href="#research-projects">Research Projects</a>
-                <a href="#class-projects">Class Projects</a>
-                <a href="#personal-projects">Personal Projects</a>
-                <a href="#about">About</a>
-            </nav>
         </div>
     </header>
     
