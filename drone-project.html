@@ -70,41 +70,21 @@
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
-        }
-
-        .image-container {
-            display: none;
-        }
-
-        .image-container.active {
-            display: block;
         }
 
         .project-image {
             max-width: 100%;
             height: auto;
             border-radius: 4px;
+            margin-bottom: 20px;
         }
 
         .image-caption {
-            margin-top: 10px;
+            margin-top: -10px;
+            margin-bottom: 20px;
             color: var(--primary-color);
             font-style: italic;
-        }
-
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            font-size: 24px;
-            cursor: pointer;
+            text-align: center;
         }
 
         .project-details {
@@ -141,24 +121,17 @@
         </div>
 
         <div class="image-gallery">
-            <div class="image-container active">
-                <img src="images/saberCAD.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
-                <p class="image-caption">Completed CAD model of the light saber hilt.</p>
-            </div>
-            <div class="image-container">
-                <img src="images/lightsaberinmillweb.jpg" alt="Testing Setup" class="project-image" style="width: 500px; height: 500px;">
-                <p class="image-caption">Machining the hilt on the mill.</p>
-            </div>
-            <div class="image-container">
-                <img src="images/lightsaberblueweb.jpg" alt="Drone Prototype" class="project-image" style="width: auto; height: 500px;">
-                <p class="image-caption">Finished hilt with assembled electronics and blade.</p>
-            </div>
-            <div class="image-container">
-                <img src="images/finishedhiltweb.jpg" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
-                <p class="image-caption">Finished hilt without blade and electronics.</p>
-            </div>
-            <button class="nav-button prev" onclick="showPrevImage()">&#8249;</button>
-            <button class="nav-button next" onclick="showNextImage()">&#8250;</button>
+            <img src="images/saberCAD.png" alt="CAD Design" class="project-image">
+            <p class="image-caption">Completed CAD model of the light saber hilt.</p>
+
+            <img src="images/lightsaberinmillweb.jpg" alt="Testing Setup" class="project-image">
+            <p class="image-caption">Machining the hilt on the mill.</p>
+
+            <img src="images/lightsaberblueweb.jpg" alt="Drone Prototype" class="project-image">
+            <p class="image-caption">Finished hilt with assembled electronics and blade.</p>
+
+            <img src="images/finishedhiltweb.jpg" alt="CAD Design" class="project-image">
+            <p class="image-caption">Finished hilt without blade and electronics.</p>
         </div>
 
         <div class="project-details">
@@ -181,24 +154,5 @@
             </ul>
         </div>
     </div>
-
-    <script>
-        const imageContainers = document.querySelectorAll('.image-container');
-        let currentIndex = 0;
-
-        function showNextImage() {
-            imageContainers[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % imageContainers.length;
-            imageContainers[currentIndex].classList.add('active');
-        }
-
-        function showPrevImage() {
-            imageContainers[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
-            imageContainers[currentIndex].classList.add('active');
-        }
-
-        setInterval(showNextImage, 5000);
-    </script>
 </body>
 </html>
