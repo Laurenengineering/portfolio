@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Drone Delivery System</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .project-overview {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .technologies {
+            background-color: #e8f4f8;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .image-gallery {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .image-container {
+            display: none;
+        }
+
+        .image-container.active {
+            display: block;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 32px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .nav-button.prev {
+            left: 10px;
+        }
+
+        .nav-button.next {
+            right: 10px;
+        }
+
+        .nav-button-caption {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+
+        .project-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Jewlery Box</h1>
+
+        <div class="project-overview">
+            <h2>Project Overview</h2>
+            <p>I learned Fusion 360 to generate a set of computer aided manufacturing instructions to run on a wooden CNC machine to cut out the body. I then assembled the guitar with the neck and a pre-wired pickguard. </p>
+            <div class="technologies">
+                Technologies: Python, Drone Design, Machine Learning, CAD
+            </div>
+        </div>
+
+        <div class="image-gallery">
+            <div class="image-container active">
+                <img src="images/jewleryboxforweb.jpg" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Completed CAD model of the light saber hilt.</p>
+            </div>
+           <div class="image-container active">
+                <img src="images/jewlweryboxdrawr.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Completed CAD model of the light saber hilt.</p>
+            </div>
+           <div class="image-container active">
+                <img src="images/JewleryBoxCAD.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Completed CAD model of the light saber hilt.</p>
+            </div>
+            <button class="nav-button prev" onclick="showPrevImage()">&#8249;</button>
+            <div class="nav-button-caption prev-caption">Previous</div>
+            <button class="nav-button next" onclick="showNextImage()">&#8250;</button>
+            <div class="nav-button-caption next-caption">Next</div>
+        </div>
+
+        <div class="project-details">
+            <h2>Additional Details</h2>
+            <h3>Non-pictured Steps</h3>
+            <ul>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+                <li>...</li>
+            </ul>
+
+            <h3>Learning Process </h3>
+            <ul>
+                <li>...</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const imageContainers = document.querySelectorAll('.image-container');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+
+        function showPrevImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
