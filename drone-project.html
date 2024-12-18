@@ -70,21 +70,23 @@
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center; /* Centers the text and images inside the gallery */
         }
 
         .project-image {
-            max-width: 100%;
-            height: auto;
+            max-width: none; /* Allows the image to maintain its original size */
+            height: auto; /* Maintains aspect ratio */
             border-radius: 4px;
-            margin-bottom: 20px;
+            margin: 0 auto; /* Centers the image */
+            display: block; /* Ensures the image is treated as a block for centering */
         }
 
         .image-caption {
-            margin-top: -10px;
+            margin-top: 10px;
             margin-bottom: 20px;
             color: var(--primary-color);
             font-style: italic;
-            text-align: center;
+            text-align: center; /* Centers the caption text */
         }
 
         .project-details {
