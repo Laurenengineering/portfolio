@@ -50,8 +50,8 @@
         }
 
         .profile-photo {
-            width: 150px;  /* Increased from 100px */
-            height: 150px; /* Increased from 100px */
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background-color: white;
         }
@@ -68,10 +68,10 @@
         }
 
         .header-photo {
-            width: 350px;  /* Increased from 300px */
+            width: 350px;
             height: auto;
             border-radius: 8px;
-            margin-left: 40px; /* Added to move it more to the right */
+            margin-left: 40px;
         }
 
         .navigation {
@@ -105,7 +105,6 @@
             transform: scaleX(1);
         }
 
-        /* Added hover effect */
         .navigation a:hover {
             color: var(--secondary-color);
             transform: translateY(-2px);
@@ -130,6 +129,7 @@
         .project-image {
             width: 200px;
             height: 150px;
+            object-fit: contain; /* Changed from default to contain */
             background-color: var(--background-color);
             border-radius: 4px;
             margin-right: 20px;
@@ -191,7 +191,7 @@
             .header-photo {
                 width: 100%;
                 margin-top: 20px;
-                margin-left: 0; /* Reset margin for mobile */
+                margin-left: 0;
             }
 
             .navigation {
@@ -222,122 +222,118 @@
             </nav>
         </div>
     </header>
-</body>
-</html>
-    
+
     <div class="container">
-
-<section id="research-projects">
-    <h2 class="section-title">Research Projects</h2>
-    <a href="crane.html" class="project-link">
-        <div class="project">
-            <img src="images/7ftCADcrane.png" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-            <div>
-                <h3>7ft-Scale Model Luffing Jib Tower Crane</h3>
-                <p>As a student researcher in Georgia Tech's Advanced Crane Controls Laboratory, I am part of a team constructing a 7-foot scale model of a luffing jib tower crane. This model will be used in tip-over testing to establish safety parameters for safer crane operations.</p>
-                <div class="technologies">
-                    Technologies: Solidworks, CAD Design, Sensor Applications and Integration, Machining on Water Jet, Electronics, Technical Writing
+        <section id="research-projects">
+            <h2 class="section-title">Research Projects</h2>
+            <a href="crane.html" class="project-link">
+                <div class="project">
+                    <img src="images/7ftCADcrane.png" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
+                    <div>
+                        <h3>7ft-Scale Model Luffing Jib Tower Crane</h3>
+                        <p>As a student researcher in Georgia Tech's Advanced Crane Controls Laboratory, I am part of a team constructing a 7-foot scale model of a luffing jib tower crane. This model will be used in tip-over testing to establish safety parameters for safer crane operations.</p>
+                        <div class="technologies">
+                            Technologies: Solidworks, CAD Design, Sensor Applications and Integration, Machining on Water Jet, Electronics, Technical Writing
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </a>
+            </a>
 
-<a href="mars.html" class="project-link">
-    <div class="project">
-        <img src="images/experimental setup mars.gif" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-        <div class="project-content">
-            <h3>Electric Field For Mars Rover Dust Mitigation Research</h3>
-            <p>I collaborated with an interdisciplinary team of students to design and conduct an experiment focused on generating an electric field to remove Martian regolith particles, aiming to enhance dust mitigation techniques for solar panels on Mars rovers.</p>
-            <div class="technologies">
-                Skills: Research, Technical Writing, Design and Implementation of a Successful Experiment, Electronics, MATLAB
-            </div>
-        </div>
-    </div>
-</a>
-            <!-- More personal project content -->
+            <a href="mars.html" class="project-link">
+                <div class="project">
+                    <img src="images/experimental setup mars.gif" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
+                    <div class="project-content">
+                        <h3>Electric Field For Mars Rover Dust Mitigation Research</h3>
+                        <p>I collaborated with an interdisciplinary team of students to design and conduct an experiment focused on generating an electric field to remove Martian regolith particles, aiming to enhance dust mitigation techniques for solar panels on Mars rovers.</p>
+                        <div class="technologies">
+                            Skills: Research, Technical Writing, Design and Implementation of a Successful Experiment, Electronics, MATLAB
+                        </div>
+                    </div>
+                </div>
+            </a>
         </section>
         
-         <section id="personal-projects">
+        <section id="personal-projects">
             <h2 class="section-title">Personal Projects</h2>
             <a href="drone-project.html" class="project-link">
                 <div class="project">
                     <img src="images/fullsaberredweb.jpg" class="project-image">
-                     <div>
-                    <h3>Aluminum Light Saber Hilt</h3>
-                    <p>I designed a custom light saber hilt in SOLIDWORS CAD software. I then machined the hilt out of aluminum using a metal lathe and mill.</p>
-                    <div class="technologies">
-                        Technologies: CAD Design, Machinig, Metal Lathe and Mill
+                    <div>
+                        <h3>Aluminum Light Saber Hilt</h3>
+                        <p>I designed a custom light saber hilt in SOLIDWORS CAD software. I then machined the hilt out of aluminum using a metal lathe and mill.</p>
+                        <div class="technologies">
+                            Technologies: CAD Design, Machinig, Metal Lathe and Mill
+                        </div>
                     </div>
                 </div>
-                 </div>
             </a>
 
             <a href="electricguitar.html" class="project-link">
                 <div class="project">
                     <img src="images/guitarinpreogressweb.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-                     <div>
-                    <h3>Electric Guitar (In Progress)</h3>
-                    <p>I am currently using Fusion 360 to design and instruct CAM software to cut the base of a fender stratocaster guitar on a wood CNC. I will then complete an acrylic pour on the body of the guitar before assembling the guitar with a neck and a variety of electrical components.</p>
-                    <div class="technologies">
-                        Technologies: Fusion 360, CAM, Wood CNC, Hand Tools, Arcylic Pour, General Woodworking skills 
+                    <div>
+                        <h3>Electric Guitar (In Progress)</h3>
+                        <p>I am currently using Fusion 360 to design and instruct CAM software to cut the base of a fender stratocaster guitar on a wood CNC. I will then complete an acrylic pour on the body of the guitar before assembling the guitar with a neck and a variety of electrical components.</p>
+                        <div class="technologies">
+                            Technologies: Fusion 360, CAM, Wood CNC, Hand Tools, Arcylic Pour, General Woodworking skills 
+                        </div>
                     </div>
                 </div>
-                     </div>
             </a>
 
-                <a href="chess.html" class="project-link">
+            <a href="chess.html" class="project-link">
                 <div class="project">
                     <img src="images/twosidechess.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-                     <div>
-                    <h3>Me Chess</h3>
-                    <p>I crafted a custom end-grain chessboard paired with personalized 3D-printed resin chess pieces.</p>
-                    <div class="technologies">
-                        Technologies: Resin Printing, 3D scanner, Blender, Various woodworking tools (Planar, Jointer, Table Saw, Drum Sander, Orbital Sander, etc.)
+                    <div>
+                        <h3>Me Chess</h3>
+                        <p>I crafted a custom end-grain chessboard paired with personalized 3D-printed resin chess pieces.</p>
+                        <div class="technologies">
+                            Technologies: Resin Printing, 3D scanner, Blender, Various woodworking tools (Planar, Jointer, Table Saw, Drum Sander, Orbital Sander, etc.)
+                        </div>
                     </div>
                 </div>
-                     </div>
             </a>
 
-             <a href="jewlerybox.html" class="project-link">
+            <a href="jewlerybox.html" class="project-link">
                 <div class="project">
                     <img src="images/jewleryboxforweb.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-                     <div>
-                    <h3>Jewlery Box</h3>
-                    <p>I designed a jewlery box in Solidworks. I 3D-printed all components and assembled them prior to adding paint and decorations. </p>
-                    <div class="technologies">
-                        Technologies: 3D Slicing and Printing on Bambu Labs 3D Printers, Solidworks, Tolerancing
+                    <div>
+                        <h3>Jewlery Box</h3>
+                        <p>I designed a jewlery box in Solidworks. I 3D-printed all components and assembled them prior to adding paint and decorations.</p>
+                        <div class="technologies">
+                            Technologies: 3D Slicing and Printing on Bambu Labs 3D Printers, Solidworks, Tolerancing
+                        </div>
                     </div>
                 </div>
-                     </div>
             </a>
 
-             <a href="helmet.html" class="project-link">
+            <a href="helmet.html" class="project-link">
                 <div class="project">
                     <img src="images/helmetinprogressweb.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-                    <h3>Storm Trooper Helmet</h3>
-                     <div>
-                    <p>I am currently working on a storm trooper helmet that I have 3D printed and assembled. Next steps include painting the helmet. </p>
-                    <div class="technologies">
-                        Technologies: 3D slicing and printing on Bambu Labs 3D printers and Ultimaker printers
+                    <div>
+                        <h3>Storm Trooper Helmet</h3>
+                        <p>I am currently working on a storm trooper helmet that I have 3D printed and assembled. Next steps include painting the helmet.</p>
+                        <div class="technologies">
+                            Technologies: 3D slicing and printing on Bambu Labs 3D printers and Ultimaker printers
+                        </div>
                     </div>
                 </div>
-                     </div>
             </a>
         </section>
 
         <section id="class-projects">
             <h2 class="section-title">Class Projects</h2>
-            <a href=2110.html" class="project-link">
+            <a href="2110.html" class="project-link">
                 <div class="project">
                     <img src="images/ME2110CAD.png" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
-                    <h3>Autonomous Competitive Robot</h3>
-                     <div>
-                    <p>Designed and constructed an autonomous robot to complete a series of push, pull, and raising tasks to compete in competition with other robots.</p>
-                    <div class="technologies">
-                        Technologies: Arduino, Mechatronics, Coding, Rapid-Prototyping, Solidworks CAD, Hand and Power Tools, Designing with constraints
+                    <div>
+                        <h3>Autonomous Competitive Robot</h3>
+                        <p>Designed and constructed an autonomous robot to complete a series of push, pull, and raising tasks to compete in competition with other robots.</p>
+                        <div class="technologies">
+                            Technologies: Arduino, Mechatronics, Coding, Rapid-Prototyping, Solidworks CAD, Hand and Power Tools, Designing with constraints
+                        </div>
                     </div>
                 </div>
-                     </div>
             </a>
         </section>
 
