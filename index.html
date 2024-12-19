@@ -129,7 +129,7 @@
         .project-image {
             width: 200px;
             height: 150px;
-            object-fit: contain; /* Changed from default to contain */
+            object-fit: contain;
             background-color: var(--background-color);
             border-radius: 4px;
             margin-right: 20px;
@@ -178,6 +178,24 @@
             display: block;
         }
 
+        .bottom-images-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 4em auto;
+            padding: 0 20px;
+        }
+
+        .bottom-image {
+            width: 45%;
+            max-width: 500px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
         @media (max-width: 768px) {
             .container {
                 width: 95%;
@@ -197,6 +215,15 @@
             .navigation {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .bottom-images-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .bottom-image {
+                width: 100%;
             }
         }
     </style>
@@ -222,7 +249,6 @@
             </nav>
         </div>
     </header>
-
     <div class="container">
         <section id="research-projects">
             <h2 class="section-title">Research Projects</h2>
@@ -238,7 +264,6 @@
                     </div>
                 </div>
             </a>
-
             <a href="mars.html" class="project-link">
                 <div class="project">
                     <img src="images/experimental setup mars.gif" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
@@ -252,7 +277,6 @@
                 </div>
             </a>
         </section>
-        
         <section id="personal-projects">
             <h2 class="section-title">Personal Projects</h2>
             <a href="drone-project.html" class="project-link">
@@ -267,7 +291,6 @@
                     </div>
                 </div>
             </a>
-
             <a href="electricguitar.html" class="project-link">
                 <div class="project">
                     <img src="images/guitarinpreogressweb.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
@@ -280,7 +303,6 @@
                     </div>
                 </div>
             </a>
-
             <a href="chess.html" class="project-link">
                 <div class="project">
                     <img src="images/twosidechess.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
@@ -293,7 +315,6 @@
                     </div>
                 </div>
             </a>
-
             <a href="jewlerybox.html" class="project-link">
                 <div class="project">
                     <img src="images/jewleryboxforweb.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
@@ -306,7 +327,6 @@
                     </div>
                 </div>
             </a>
-
             <a href="helmet.html" class="project-link">
                 <div class="project">
                     <img src="images/helmetinprogressweb.jpg" alt="Triboelectric Field For Mars Rover Dust Mitigation" class="project-image">
@@ -320,7 +340,6 @@
                 </div>
             </a>
         </section>
-
         <section id="class-projects">
             <h2 class="section-title">Class Projects</h2>
             <a href="2110.html" class="project-link">
@@ -336,27 +355,21 @@
                 </div>
             </a>
         </section>
-
-      <section id="about">
+        <section id="about">
             <h2 class="section-title">About</h2>
             <p style="margin-bottom: 2em; text-indent: 2em;">
                 I am a fifth-year Honors Program Mechanical Engineering student at Georgia Tech, pursuing a dual-degree program in which I previously earned a Bachelor's in Engineering Sciences with minors in math, physics, and theatre from Berry College. Currently, I serve as the Vice President of Finance for Georgia Tech's Theme Park Engineering and Design Club, where I have been an active member since Spring 2023.
             </p>
-            
             <p style="margin-bottom: 2em; text-indent: 2em;">
                 In addition to my academic pursuits, I am a full Prototyping Instructor and Woodroom Apprentice at Georgia Tech's Flowers Invention Studio, the largest student makerspace in the United States. As a Prototyping Instructor, I am trained and certified in the safe operation of various tools, including 3D printers, waterjets, laser cutters, woodworking and metalworking tools, electronics, sewing machines, and vinyl cutters. I volunteer my time to assist students in safely completing their projects, whether personal or academic. As a Woodroom Apprentice, I have completed numerous woodworking projects and have more knowledge on woodworking techniques and tool maintenence than other prototyping instructors.
             </p>
-            
             <p style="margin-bottom: 2em; text-indent: 2em;">
                 I am deeply passionate about a career in the Themed Entertainment Industry. My experience includes an internship with Walt Disney World's Worldwide Safety Assurance Team, where I gained invaluable insights into the industry. I actively participate in key industry events, such as attending ASTM F24 and IAAPA, alongside my peers from the Theme Park Engineering and Design Club. Additionally, I was honored to recently receive the IAAPA ASTM Experiential Scholarship.
             </p>
         </section>
+        <div class="bottom-images-container">
+            <img src="images/left-image.jpg" alt="Left Image" class="bottom-image" style="margin-right: 60px;">
+            <img src="images/right-image.jpg" alt="Right Image" class="bottom-image">
+        </div>
     </div>
-  <section id="bottom-images" style="margin: 4em 0;">
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <img src="images/scholar.jpg" alt="Left Image" style="width: 45%; max-width: 500px; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <img src="images/candelight.jpg" alt="Right Image" style="width: 45%; max-width: 500px; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-            </div>
-        </section
-</body>
-</html>
+    <footer
