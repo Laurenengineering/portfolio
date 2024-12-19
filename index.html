@@ -50,16 +50,28 @@
         }
 
         .profile-photo {
-            width: 100px;
-            height: 100px;
+            width: 150px;  /* Increased from 100px */
+            height: 150px; /* Increased from 100px */
             border-radius: 50%;
             background-color: white;
         }
 
+        .title-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .student-title {
+            font-size: 1.1rem;
+            margin-top: 5px;
+            color: #ecf0f1;
+        }
+
         .header-photo {
-            width: 300px;
+            width: 350px;  /* Increased from 300px */
             height: auto;
             border-radius: 8px;
+            margin-left: 20px; /* Added to move it more to the right */
         }
 
         .navigation {
@@ -85,6 +97,19 @@
             bottom: 0;
             left: 0;
             background-color: white;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .navigation a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* Added hover effect */
+        .navigation a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
         }
 
         .project {
@@ -166,6 +191,7 @@
             .header-photo {
                 width: 100%;
                 margin-top: 20px;
+                margin-left: 0; /* Reset margin for mobile */
             }
 
             .navigation {
@@ -181,7 +207,10 @@
             <div class="header-content">
                 <div class="profile-section">
                     <img src="images/headshot.jpg" alt="Profile Photo" class="profile-photo">
-                    <h1>Lauren Thompson</h1>
+                    <div class="title-section">
+                        <h1>Lauren Thompson</h1>
+                        <p class="student-title">Honors Mechanical Engineering Student at Georgia Tech</p>
+                    </div>
                 </div>
                 <img src="images/techtower.jpg" alt="Header Photo" class="header-photo">
             </div>
@@ -193,6 +222,8 @@
             </nav>
         </div>
     </header>
+</body>
+</html>
     
     <div class="container">
 
