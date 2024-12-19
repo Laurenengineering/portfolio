@@ -70,23 +70,54 @@
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center; /* Centers the text and images inside the gallery */
+            text-align: center;
+            position: relative;
+        }
+
+        .image-container {
+            display: none;
+        }
+
+        .image-container.active {
+            display: block;
         }
 
         .project-image {
-            max-width: none; /* Allows the image to maintain its original size */
-            height: auto; /* Maintains aspect ratio */
+            max-width: 100%;
+            height: auto;
             border-radius: 4px;
-            margin: 0 auto; /* Centers the image */
-            display: block; /* Ensures the image is treated as a block for centering */
         }
 
         .image-caption {
             margin-top: 10px;
-            margin-bottom: 20px;
             color: var(--primary-color);
             font-style: italic;
-            text-align: center; /* Centers the caption text */
+            text-align: left;
+            max-width: 100%;
+            padding: 0 15px;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 32px;
+            cursor: pointer;
+            display: block;
+        }
+
+        .nav-button-caption {
+            position: absolute;
+            bottom: -25px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: var(--primary-color);
         }
 
         .project-details {
@@ -95,6 +126,16 @@
             padding: 25px;
             margin-top: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .external-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .external-link:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -123,17 +164,25 @@
         </div>
 
         <div class="image-gallery">
-            <img src="images/saberCAD.png" alt="CAD Design" class="project-image">
-            <p class="image-caption">Completed CAD model of the light saber hilt.</p>
-
-            <img src="images/lightsaberinmillweb.jpg" alt="Testing Setup" class="project-image">
-            <p class="image-caption">Machining the hilt on the mill.</p>
-
-            <img src="images/lightsaberblueweb.jpg" alt="Drone Prototype" class="project-image">
-            <p class="image-caption">Finished hilt with assembled electronics and blade.</p>
-
-            <img src="images/finishedhiltweb.jpg" alt="CAD Design" class="project-image">
-            <p class="image-caption">Finished hilt without blade and electronics.</p>
+            <div class="image-container active">
+                <img src="images/saberCAD.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Completed CAD model of the light saber hilt.</p>
+            </div>
+            
+            <div class="image-container active">
+                <img src="images/lightsaberinmillweb.jpg" alt="Testing Setup" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Machining the hilt on the mill.</p>
+            </div>
+            
+            <div class="image-container active">
+                <img src="images/lightsaberblueweb.jpg" alt="Drone Prototype" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Finished hilt with assembled electronics and blade.</p>
+            </div>
+            
+            <div class="image-container active">
+                <img src="images/finishedhiltweb.jpg" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+                <p class="image-caption">Finished hilt without blade and electronics.</p>
+            </div>
         </div>
 
         <div class="project-details">
@@ -156,5 +205,22 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        const imageContainers = document.querySelectorAll('.image-container');
+        let currentIndex = 0;
+
+        function showNextImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+
+        function showPrevImage() {
+            imageContainers[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
+            imageContainers[currentIndex].classList.add('active');
+        }
+    </script>
 </body>
 </html>
