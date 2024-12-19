@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Drone Delivery System</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --background-color: #f4f6f7;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .project-overview {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .technologies {
+            background-color: #e8f4f8;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+
+        .image-gallery {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .image-row img {
+            flex: 1;
+            max-width: 100%;
+            height: auto;
+            margin: 0 5px;
+            border-radius: 4px;
+        }
+
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        .project-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                padding: 15px;
+            }
+            .image-row {
+                flex-direction: column;
+            }
+            .image-row img {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Competitive Autonomous Robot</h1>
+
+        <div class="project-overview">
+            <h2>Project Overview</h2>
+            <p>As part of the required Mechanical Engineering 2110 course, Creative Decisions and Design, students work in teams of four to design and build an autonomous robot to compete in a final competition. The project is guided by several design constraints: robots must adhere to specified height, length, and width limits, and their power sources are limited to components provided in a kit, such as motors, sensors, solenoids, and other mechatronic elements, along with additional power options like mousetraps, gravity, and rubber bands. The robots must operate autonomously, controlled by an Arduino and code written by the students.
+
+Each round of the competition places four robots on a track, where they compete to complete tasks that involve pushing, pulling, and lifting to score more points than their competitors. Robots have a 40-second time limit per round, after which all power to the track is cut. Each semester, the competition features a unique theme, and during my semester, the theme was Kung Fu Panda.
+
+Our tasks were designed around this theme and included:
+               <ul>
+                <li> Raising Po Panda: Teams had to lift a Po Panda figurine above 3 feet and place it onto the rotating Jade Palace Platform at the top of the track, earning the highest points.</li>
+                 <li> Jade Scroll Collection: Robots needed to retrieve their team's color-coded Jade Scroll from a rotating platform. Collecting the wrong scroll incurred penalties, requiring precise sensor implementation to differentiate colors.</li>
+                 <li> Bao Bun Gathering: Points were awarded for every Bao Bun collected from the center and placed in a designated bowl on the track.</li>
+                 <li> Tai Lung Knockout: Teams scored additional points by knocking a Tai Lung Tiger figurine out of their zone and into a competitor's zone.</li>
+                 <li> Bunny Villager Protection: Points were also earned by ensuring that bunny villager figurines within the team’s zone remained unharmed.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="image-gallery">
+            <div class="image-row">
+                <img src="images/ME2110CAD.png" alt="Filter Example">
+            </div>
+            <p class="image-caption">Finished CAD for the final robot design.</p>
+            <div class="image-container active">
+                <img src="images/dusttable.png" alt="Dust Table" class="project-image">
+                <p class="image-caption">Results for various dust particle sizes.</p>
+            </div>
+            <div class="image-container active">
+                <img src="images/unfiltered.png" alt="Unfiltered Dust" class="project-image">
+                <p class="image-caption">Results for unfiltered dust particles.</p>
+            </div>
+            <div class="image-container active">
+                <img src="images/experimental setup mars.gif" alt="Experimental Setup" class="project-image">
+                <p class="image-caption">The full experimental setup.</p>
+            </div>
+            <div class="image-container active">
+                <video width="640" height="360" controls>
+                    <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="image-caption">A run of the experiment where it is clear the electric field successfully removes the majority of particles within a few passes.</p>
+            </div>
+        </div>
+
+        <div class="project-details">
+            <h2>Additional Details</h2>
+            <h3>Non-pictured Steps</h3>
+            <ul>
+                <li>Additional information can be found in the group's report <a href="Final Report.pdf" target="_blank" rel="noopener noreferrer" class="external-link">here</a>.</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
