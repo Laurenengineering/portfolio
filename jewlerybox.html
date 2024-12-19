@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomous Drone Delivery System</title>
+    <title>Jewelry Box</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -71,21 +70,17 @@
             padding: 25px;
             margin-bottom: 30px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            text-align: center;
-            position: relative;
         }
 
         .image-container {
-            display: none;
-        }
-
-        .image-container.active {
-            display: block;
+            margin-bottom: 20px;
         }
 
         .project-image {
-            max-width: 100%;
-            height: auto;
+            width: auto;
+            height: 500px;
+            display: block;
+            margin: 0 auto;
             border-radius: 4px;
         }
 
@@ -93,37 +88,7 @@
             margin-top: 10px;
             color: var(--primary-color);
             font-style: italic;
-        }
-
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            font-size: 32px;
-            cursor: pointer;
-            display: block;
-        }
-
-        .nav-button.prev {
-            left: 10px;
-        }
-
-        .nav-button.next {
-            right: 10px;
-        }
-
-        .nav-button-caption {
-            position: absolute;
-            bottom: -25px;
-            width: 100%;
             text-align: center;
-            font-size: 14px;
-            color: var(--primary-color);
         }
 
         .project-details {
@@ -138,6 +103,10 @@
             .image-gallery {
                 padding: 15px;
             }
+            .project-image {
+                height: auto;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -149,7 +118,7 @@
     </header>
 
     <div class="container">
-        <h1>Jewlery Box</h1>
+        <h1>Jewelry Box</h1>
 
         <div class="project-overview">
             <h2>Project Overview</h2>
@@ -160,22 +129,18 @@
         </div>
 
         <div class="image-gallery">
-            <div class="image-container active">
-                <img src="images/jewleryboxforweb.jpg" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+            <div class="image-container">
+                <img src="images/jewleryboxforweb.jpg" alt="CAD Design" class="project-image">
                 <p class="image-caption">Completed CAD model of the light saber hilt.</p>
             </div>
-           <div class="image-container active">
-                <img src="images/jewlweryboxdrawr.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+            <div class="image-container">
+                <img src="images/jewlweryboxdrawr.png" alt="CAD Design" class="project-image">
                 <p class="image-caption">Completed CAD model of the light saber hilt.</p>
             </div>
-           <div class="image-container active">
-                <img src="images/JewleryBoxCAD.png" alt="CAD Design" class="project-image" style="width: auto; height: 500px;">
+            <div class="image-container">
+                <img src="images/JewleryBoxCAD.png" alt="CAD Design" class="project-image">
                 <p class="image-caption">Completed CAD model of the light saber hilt.</p>
             </div>
-            <button class="nav-button prev" onclick="showPrevImage()">&#8249;</button>
-            <div class="nav-button-caption prev-caption">Previous</div>
-            <button class="nav-button next" onclick="showNextImage()">&#8250;</button>
-            <div class="nav-button-caption next-caption">Next</div>
         </div>
 
         <div class="project-details">
@@ -194,22 +159,5 @@
             </ul>
         </div>
     </div>
-
-    <script>
-        const imageContainers = document.querySelectorAll('.image-container');
-        let currentIndex = 0;
-
-        function showNextImage() {
-            imageContainers[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % imageContainers.length;
-            imageContainers[currentIndex].classList.add('active');
-        }
-
-        function showPrevImage() {
-            imageContainers[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex - 1 + imageContainers.length) % imageContainers.length;
-            imageContainers[currentIndex].classList.add('active');
-        }
-    </script>
 </body>
 </html>
