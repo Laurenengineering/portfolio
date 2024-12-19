@@ -65,28 +65,30 @@
         }
 
         .image-gallery {
-            max-height: 500px; /* Limit the height of the gallery */
-            overflow-y: auto;
-            padding: 15px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 25px;
             margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .image-gallery img {
+        .image-container {
+            margin-bottom: 20px;
+        }
+
+        .project-image {
+            width: auto;
+            height: 500px;
             display: block;
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            border-radius: 8px;
+            margin: 0 auto;
+            border-radius: 4px;
         }
 
         .image-caption {
-            text-align: center;
-            font-style: italic;
-            margin-top: 5px;
+            margin-top: 10px;
             color: var(--primary-color);
+            font-style: italic;
+            text-align: center;
         }
 
         .project-details {
@@ -99,11 +101,11 @@
 
         @media (max-width: 768px) {
             .image-gallery {
-                max-height: 300px;
+                padding: 15px;
             }
-
-            .image-gallery img {
-                margin-bottom: 5px;
+            .project-image {
+                height: auto;
+                width: 100%;
             }
         }
     </style>
@@ -127,24 +129,24 @@
         </div>
 
         <div class="image-gallery">
-            <div>
-                <img src="images/chessboardglueupweb.jpg" alt="Final glue-up of chessboard">
+            <div class="image-container">
+                <img src="images/chessboardglueupweb.jpg" alt="Final glue-up of chessboard" class="project-image">
                 <p class="image-caption">Final glue up before finishing chess board.</p>
             </div>
-            <div>
-                <img src="images/finishedchessboardweb.jpg" alt="Finished Chessboard">
+            <div class="image-container">
+                <img src="images/finishedchessboardweb.jpg" alt="Finished Chessboard" class="project-image">
                 <p class="image-caption">Finished chess board.</p>
             </div>
-            <div>
-                <img src="images/chesspiece.png" alt="Meshed Chess Pieces">
+            <div class="image-container">
+                <img src="images/chesspiece.png" alt="Meshed Chess Pieces" class="project-image">
                 <p class="image-caption">Meshed STL files in Blender to create chess pieces.</p>
             </div>
-            <div>
-                <img src="images/closeupboth.jpg" alt="Closeup of Chess Pieces">
+            <div class="image-container">
+                <img src="images/closeupboth.jpg" alt="Closeup of Chess Pieces" class="project-image">
                 <p class="image-caption">A closeup of finished pieces.</p>
             </div>
-            <div>
-                <img src="images/twosidechess.jpg" alt="Finished Product">
+            <div class="image-container">
+                <img src="images/twosidechess.jpg" alt="Finished Product" class="project-image">
                 <p class="image-caption">Finished Product!</p>
             </div>
         </div>
