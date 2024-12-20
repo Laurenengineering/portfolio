@@ -69,11 +69,13 @@
         }
 
         .header-photo {
-        width: 350px;
-        height: auto;
-        border-radius: 8px;
-        margin-left: 120px; /* Moved further to the right */
-    }
+    width: 350px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: auto; /* Automatically pushes the image to the far right */
+    position: relative; /* Enable fine-tuned adjustment */
+    right: -20px; /* Moves the image further to the right */
+}
 
         .navigation {
             display: flex;
