@@ -127,15 +127,15 @@
 
         <div class="image-gallery">
             <div class="image-container">
-                <img src="images/helmetinprogressweb.jpg" alt="CAD Design" class="project-image">
+                <img src="images/pen1.jpg" alt="CAD Design" class="project-image">
                 <p class="image-caption">The first step involves preparing both pieces of the pen and turning them until they are circular.</p>
             </div>
             <div class="image-container">
-                <img src="images/helmetinprogressweb.jpg" alt="CAD Design" class="project-image">
+                <img src="images/pen2.jpg" alt="CAD Design" class="project-image">
                 <p class="image-caption">Turning acrolite (the blue) is a tedious and slow process, since the material is known to shatter.</p>
             </div>
             <div class="image-container">
-                <img src="images/helmetinprogressweb.jpg" alt="CAD Design" class="project-image">
+                <img src="images/pen3.jpg" alt="CAD Design" class="project-image">
                 <p class="image-caption">An asssortment of final pens! Different shapes require a variety of differing techniques and tools. </p>
             </div>
             
