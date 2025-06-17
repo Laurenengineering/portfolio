@@ -73,7 +73,11 @@
         }
 
         .image-container {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .image-container:last-child {
+            margin-bottom: 0;
         }
 
         .project-image {
@@ -82,13 +86,17 @@
             display: block;
             margin: 0 auto;
             border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         .image-caption {
-            margin-top: 10px;
+            margin-top: 15px;
             color: var(--primary-color);
             font-style: italic;
             text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .project-details {
@@ -118,80 +126,91 @@
     </header>
 
     <div class="container">
-        <h1>Electric Guitar (Page editing curretnly in progress, apologies for formatting errors)</h1>
+        <h1>Electric Guitar</h1>
 
         <div class="project-overview">
             <h2>Project Overview</h2>
-            <p>I used Fusion 360 to create computer-aided manufacturing (CAM) instructions for operating a wood CNC machine to cut out a Fender Stratocaster guitar body. From there, I added a veneer to the top and finished the body of the guitar. I also finsihed the neck, and added copper adhesive tape to the body and pickguard before soldering and assembling elements together. </p>
+            <p>I used Fusion 360 to create computer-aided manufacturing (CAM) instructions for operating a wood CNC machine to cut out a Fender Stratocaster guitar body. From there, I added a veneer to the top and finished the body of the guitar. I also finished the neck, and added copper adhesive tape to the body and pickguard before soldering and assembling elements together.</p>
         </div>
 
         <div class="image-gallery">
+            <h2>Build Process</h2>
+            
             <div class="image-container">
-                <img src="images/guitarinpreogressweb.jpg" alt="CAD Design" class="project-image">
+                <img src="images/guitarinpreogressweb.jpg" alt="CNC Machining Guitar Body" class="project-image">
                 <p class="image-caption">Machining the guitar body on a wood CNC. This was a 2-part operation that required precise alignment of the material on the machine. From there, a lot of sanding and filing was done to ensure smooth curvatures for comfortable playing.</p>
             </div>
-        </div>
-         <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/holesinguitar.jpg" alt="CAD Design" class="project-image">
+                <img src="images/holesinguitar.jpg" alt="Weight Relief Holes" class="project-image">
                 <p class="image-caption">To decrease the weight of the guitar, the body was placed on a drill press to remove a large amount of material. The holes were then filled in with cheaper material so the veneer had a flat surface to be glued onto.</p>
             </div>
-        </div>
-          <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/veneeronguitar.JPG" alt="CAD Design" class="project-image">
+                <img src="images/veneeronguitar.JPG" alt="Veneer Application" class="project-image">
                 <p class="image-caption">Using wood glue and clamps, the veneer was attached to the top of the guitar. The veneer had to be repeatedly heat treated to bend over the slope in the bottom lefthand corner.</p>
             </div>
-        <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/routingguitar.JPG" alt="CAD Design" class="project-image">
+                <img src="images/routingguitar.JPG" alt="Router Work" class="project-image">
                 <p class="image-caption">Veneer over the pockets was removed using a router.</p>
             </div>
-            <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/moreguitarimg.jpg" alt="CAD Design" class="project-image">
+                <img src="images/moreguitarimg.jpg" alt="Veneer Detail" class="project-image">
                 <p class="image-caption">Closer-up view to see the details on the veneer.</p>
             </div>
-        </div>
-         <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/lasertest.JPG" alt="CAD Design" class="project-image">
-                <p class="image-caption">Since I figured this was one of the only times I would have the opportunity to make a guitar, I wanted to add some one-of-a-kind features! I tested a variety of laser cut designs on the body, and decided to go with tis rose design. It took precise alignment and settings on the laser cut to get this intricate design successfully cut.</p>
+                <img src="images/lasertest.JPG" alt="Laser Cut Design Test" class="project-image">
+                <p class="image-caption">Since I figured this was one of the only times I would have the opportunity to make a guitar, I wanted to add some one-of-a-kind features! I tested a variety of laser cut designs on the body, and decided to go with this rose design. It took precise alignment and settings on the laser cutter to get this intricate design successfully cut.</p>
             </div>
-             <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/laserdeisng.JPG" alt="CAD Design" class="project-image">
-                <p class="image-caption">Final laser cut Design.</p>
+                <img src="images/laserdeisng.JPG" alt="Final Laser Design" class="project-image">
+                <p class="image-caption">Final laser cut design.</p>
             </div>
-                  <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/sprayguitar.JPG" alt="CAD Design" class="project-image">
-                <p class="image-caption">After several rounds of sanding, buffing, and applying finish, a final spray coat of polyeurathane was applied.</p>
+                <img src="images/sprayguitar.JPG" alt="Spray Finish" class="project-image">
+                <p class="image-caption">After several rounds of sanding, buffing, and applying finish, a final spray coat of polyurethane was applied.</p>
             </div>
-                       <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/neckfinish.JPG" alt="CAD Design" class="project-image">
+                <img src="images/neckfinish.JPG" alt="Neck Finishing" class="project-image">
                 <p class="image-caption">After finishing the body, I was able to begin finishing the neck. This required leveling the frets, sanding, and finishing. Additionally, I added a piece of the same veneer I used for the body onto the headstock.</p>
             </div>
-                           <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/coppertape.JPG" alt="CAD Design" class="project-image">
+                <img src="images/coppertape.JPG" alt="Copper Tape Shielding" class="project-image">
                 <p class="image-caption">Copper adhesive tape was added to the pockets as well as the pickguard to prevent feedback while playing. A digital multimeter was used to ensure connection between pieces of tape.</p>
             </div>
-        </div>
-                 <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/guitarfront.JPG" alt="CAD Design" class="project-image">
+                <img src="images/guitarfront.JPG" alt="Final Body Assembly" class="project-image">
                 <p class="image-caption">Electronic components were soldered and everything was assembled. Here is a closeup of the final body.</p>
             </div>
-        </div>
-                                                 <div class="image-gallery">
+
             <div class="image-container">
-                <img src="images/full photoguitar.jpg" alt="CAD Design" class="project-image">
+                <img src="images/full photoguitar.jpg" alt="Completed Guitar" class="project-image">
                 <p class="image-caption">Final Guitar, and it sounds great!</p>
             </div>
         </div>
 
         <div class="project-details">
-            <h2>Additional Details (In Progress) </h2>
-            <h3>Non-pictured Steps</h3
+            <h2>Additional Details</h2>
+            <h3>Technologies Used</h3>
+            <div class="technologies">Fusion 360 CAD/CAM</div>
+            <div class="technologies">CNC Machining</div>
+            <div class="technologies">Laser Cutting</div>
+            <div class="technologies">Electronics & Soldering</div>
+            
+            <h3>Key Skills Demonstrated</h3>
+            <p>This project showcased a wide range of manufacturing and craftsmanship skills including precision CNC programming, woodworking techniques, electronic assembly, and finishing processes. The integration of traditional luthier techniques with modern digital fabrication methods resulted in a unique, high-quality instrument.</p>
+            
+            <h3>Challenges Overcome</h3>
+            <p>The most challenging aspects included achieving proper veneer adhesion around complex curves, precise laser cutting alignment, and ensuring proper electrical shielding for clean sound output. Each step required careful planning and execution to maintain the professional quality of the final instrument.</p>
+        </div>
+    </div>
+</body>
+</html>
